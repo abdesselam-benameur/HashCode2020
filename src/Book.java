@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 
 public class Book {
 	private int Score;
 	private int ID;
+	private ArrayList<Integer> libraries = new ArrayList<Integer>();
 	
 	
 	public Book(int score, int iD) {
@@ -46,5 +48,9 @@ public class Book {
 
 	public void setScore(int score) {
 		Score = score;
+	}
+
+	public ArrayList<Integer> getLibraries() {
+		return libraries;
 	}
 }
