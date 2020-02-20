@@ -1,8 +1,20 @@
 
 public class Book {
 	private int Score;
-	public Book(int score) {
+	private int ID;
+
+	public Book(int score, int iD) {
+		super();
 		Score = score;
+		ID = iD;
+	}
+	
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
 	}
 
 	public int getScore() {
