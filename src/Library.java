@@ -17,8 +17,11 @@ public class Library implements Comparable<Library>{
 		return somme;
 	}
 	
-	public float daysScanning() {
-		return nbBooks / nbBookPerDay;
+	public int daysScanning() {
+		if (nbBooks%nbBookPerDay == 0)
+			return nbBooks / nbBookPerDay;
+		else
+			return nbBooks / nbBookPerDay - nbBooks%nbBookPerDay +1;
 	}
 	
 	public Library(int ID, int nbBooks, int nbBookPerDay, int nbDays) {

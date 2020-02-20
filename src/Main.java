@@ -1,5 +1,6 @@
 //import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 //import java.io.FileNotFoundException;
@@ -84,9 +85,17 @@ public class Main {
 		
 		if (sameBooksPerDay && sameScore) {
 			Arrays.sort(biblios);
+			int y=0, ind=0;
+			ArrayList<Integer> IDs = new ArrayList<Integer>();
+			while (D > 0) {
+				D -= biblios[0].getNbDays();
+				D -= biblios[ind].daysScanning();
+				IDs.add(biblios[ind].getID());
+				y++;
+			}
 			
-			D -= biblios[0].getNbDays();
-			//if (biblios[0].daysScanning() > D)
+			
+				
 				
 		}
 		// Closing is necessary to retrieve the resources allocated
