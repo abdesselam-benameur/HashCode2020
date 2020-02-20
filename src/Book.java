@@ -1,7 +1,6 @@
 
 public class Book {
 	private int Score;
-
 	public Book(int score) {
 		Score = score;
 	}
